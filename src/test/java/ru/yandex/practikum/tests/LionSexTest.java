@@ -9,11 +9,11 @@ import ru.yandex.practikum.model.Lion;
 @RunWith(Parameterized.class)
 public class LionSexTest {
 
-    private final String SEX;
+    private final String sex;
     Feline feline;
 
     public LionSexTest(String Sex) {
-        this.SEX = Sex;
+        this.sex = Sex;
     }
 
     @Parameterized.Parameters(name = "Тестовые данные: {0}")
@@ -31,6 +31,6 @@ public class LionSexTest {
 
     @Test(expected = Exception.class)
     public void invalidLionSexTest() {
-        new Lion(SEX, feline);
+        new Lion(sex, feline);
     }
 }

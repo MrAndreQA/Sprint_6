@@ -33,15 +33,6 @@ public class LionTest {
         int actualResult = lion.getKittens();
         assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);
     }
-
-    @Test
-    public void lionCheckManeTest() {
-        Lion lion = new Lion("Самец", feline);
-        boolean expectedResult = true;
-        boolean actualResult = lion.doesHaveMane();
-        assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);
-    }
-
     @Test
     public void lionMaleTest() {
         Lion lion = new Lion("Самец", feline);
@@ -57,7 +48,5 @@ public class LionTest {
     }
 
     @Test(expected = Exception.class)
-    public void lionUndefinedManeTest() {
-        new Lion("Undefined", feline);
-    }
+    public void lionUndefinedManeTest() { new Lion("Undefined", feline); }
 }

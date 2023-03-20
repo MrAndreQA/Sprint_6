@@ -10,7 +10,6 @@ import ru.yandex.practikum.model.Feline;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
 
-
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
 
@@ -19,7 +18,7 @@ public class CatTest {
 
     @Test
     public void getVoiceTest() {
-        Cat cat = new Cat(new Feline());
+        Cat cat = new Cat(feline);
         String expectedResult = "Мяу";
         String actualResult = cat.getSound();
         assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);

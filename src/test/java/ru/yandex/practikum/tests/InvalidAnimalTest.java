@@ -6,10 +6,10 @@ import ru.yandex.practikum.model.Feline;
 
 @RunWith(Parameterized.class)
 public class InvalidAnimalTest {
-    private final String ANIMAL_KIND;
+    private final String animalKind;
 
     public InvalidAnimalTest(String animalKind) {
-        this.ANIMAL_KIND = animalKind;
+        this.animalKind = animalKind;
     }
 
     @Parameterized.Parameters(name = "Тестовые данные: {0}")
@@ -25,6 +25,6 @@ public class InvalidAnimalTest {
     @Test(expected = Exception.class)
     public void getInvalidAnimalFoodTest() {
         Feline feline = new Feline();
-        feline.getFood(ANIMAL_KIND);
+        feline.getFood(animalKind);
     }
 }
